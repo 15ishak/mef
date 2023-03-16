@@ -1,0 +1,76 @@
+   ================================================================
+  |                                                                |
+  |                             CCMEF                              |
+  |         Code de Calcul par la Méthode des Eléments Finis       |
+  |                                                                |
+  |            Etudiant(e)s :                                      |
+  |                    Date :                                      |
+  |                                                                |
+  |                                                                |
+  |              Enseignant : ZQ Feng                              |
+  |                                                                |
+  |              UFR S&T UEVE - Université Paris-Saclay            |
+  |                                                                |
+   ================================================================
+
+
+============ Analyse statique d'une structure plane à 2 barres
+
+	Type d'éléments : barre 2D
+
+============ parametres_du_probleme
+
+	nombre total de noeuds:               nnt  = 3
+	dimension du problème:                ndim = 2
+	nombre total d'éléments:              nelt = 2
+	nombre de noeuds par élément:         nnel = 2
+	nombre ddls par noeud:                ndln = 2
+	nombre ddls par élément:              ndle = 4
+	nombre de matériaux:                  nmat = 2
+	nombre de propriétés physiques:       nphy = 3
+	nombre de composantes gradients:      nsig = 1
+	nombre d equations a résoudre:         neq = 6
+
+============ noeuds ============ 
+    1               0               0
+    2             400               0
+    3               0             400
+============ element ============ 
+    1     1     2     1
+    2     2     3     2
+============ proprietes ============ 
+    1          200000              10               0
+    2          200000              20               0
+============ conditions_aux_limites ============ 
+ Méthode du terme diagonal unité
+    1     1     1               0               0
+    2     0     1               0               0
+    3     1     0               0               0
+	nombre total des ddl imposés:         ndlt = 4
+
+============ sollicitation ============ 
+    3               0           -5000
+
+
+======= Degrés de libert?aux noeuds =======
+
+    1               0               0
+    2               1               0
+    3               0        -2.41421
+
+======= Réactions aux noeuds =======
+
+    1           -5000               0
+    2               0            5000
+    3            5000               0
+.....................................................
+somme               0            5000
+
+
+======= Contraintes dans les éléments =======
+ ------------------------ Elément :     1
+    1             500
+    2             500
+ ------------------------ Elément :     2
+    2        -353.553
+    3        -353.553

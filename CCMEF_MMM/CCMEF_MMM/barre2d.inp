@@ -1,0 +1,25 @@
+Analyse statique d'une structure plane à 2 barres
+Type d'élément
+1
+parametres_du_probleme
+3  2  2  3  
+noeuds
+1  0.0   0.0
+2  400.0   0.0
+3  0.0   400.0
+element
+1   1   2         1
+2   2   3         2
+proprietes
+1   2.0e5   10.0  0.0
+2   2.0e5   20.0  0.0
+conditions_aux_limites
+methode 2
+1   1   1   0.0   0.0
+2   0   1   0.0   0.0
+3   1   0   0.0   0.0
+-9999
+sollicitation
+3   0.0   -5.0e3
+-9999
+
